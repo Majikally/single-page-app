@@ -46,7 +46,7 @@
         padding-left: 15px;
     }
 
-    button {
+    #add {
         width: 75px;
         height: 50px;
         background-color: var(--buttons);
@@ -56,7 +56,7 @@
         border-style: solid;
     }
 
-    button:hover {
+    #add:hover {
         width: 75px;
         height: 50px;
         background-color: #f2efc7ff;
@@ -77,25 +77,27 @@ I want to use a grid in my CSS file so that the section class "achievement" show
         background-color: var(--achievements-bg);
         margin: 50px;
         display: grid;
-        grid-template-columns: 1fr 3fr;
+        grid-template-columns: 3fr 1fr;
         grid-template-areas:
-            "icon title"
-            "icon requirement";
+            "title icon"
+            "requirement icon";
         border-color:#000000;
         border-radius: 30px;
         border-width: 3px;
         border-style: solid;
     }
 
-    .achievement img {
-        grid-area: icon;
-        width: 100%;
+    .achievement #completed {
+        justify-self: center;
+        align-self: center;
     }
 
     .achievement h2 {
         grid-area: title;
+        padding-left: 15px;
     }
 
     .achievement p {
         grid-area: requirement;
+        padding-left: 15px;
     }
