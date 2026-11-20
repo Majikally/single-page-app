@@ -9,15 +9,11 @@
 <body>
     <h1>Minecraft Achievement Tracker</h1>
     <section id=buttons>
-        <input type="text" id="achievementName" name="achievementName" placeholder="Type Achievement Here">
+        <input type="text" id="achievementName" name="achievementName" placeholder="Type Achievement Name Here (i.e Acquire Hardware)">
         <button id="add" onclick="fetchData()">Add</button>
     </section>
 
-    <section class="achievement">
-        <h2>Achievement Name</h2>
-        <p>Achievement Requirement</p>
-        <button id="completed" onclick="reset()">Completed?</button>
-    </section>
+    <section id="achievementList"></section>
     <script src="utilities.js"></script>
 </body>
 </html>

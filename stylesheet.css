@@ -1,7 +1,7 @@
 :root {
     --primary-bg: #9f7e69ff;
     --primary-text: black;
-    --achievements-bg: #d2bba0ff;
+    --achievements-bg: #ffeee2ff;
     --header: #ffeee2ff;
     --buttons: #f7ffe0ff;
 }
@@ -73,7 +73,7 @@ Used AI to help refamiliarlize with grids, using the prompt:
 I want to use a grid in my CSS file so that the section class "achievement" shows the img icon as taking up 1/4 the line, and the rest of the text content taking up 3/4 of the line. Also, the h2 should be on top of the <p>, they should NOT be side by side.
 */
 
-    .achievement {
+    .achievements {
         background-color: var(--achievements-bg);
         margin: 50px;
         display: grid;
@@ -87,17 +87,38 @@ I want to use a grid in my CSS file so that the section class "achievement" show
         border-style: solid;
     }
 
-    .achievement #completed {
+    .achievements .completed {
         justify-self: center;
         align-self: center;
     }
 
-    .achievement h2 {
+    .achievements h2 {
         grid-area: title;
         padding-left: 15px;
     }
 
-    .achievement p {
+    .achievements p {
         grid-area: requirement;
         padding-left: 15px;
+    }
+
+    .completed {
+        width: 250px;
+        height: 50px;
+        background-color: var(--buttons);
+        border-color:#000000;
+        border-radius: 30px;
+        border-width: 3px;
+        border-style: solid;
+    }
+
+    .completed:hover {
+        width: 250px;
+        height: 50px;
+        background-color: #f2efc7ff;
+         border-color:#000000;
+        border-radius: 30px;
+        border-width: 3px;
+        border-style: solid;
+        box-shadow: 5px 5px 0px black;
     }
