@@ -1,0 +1,101 @@
+:root {
+    --primary-bg: #9f7e69ff;
+    --primary-text: black;
+    --achievements-bg: #d2bba0ff;
+    --header: #ffeee2ff;
+    --buttons: #f7ffe0ff;
+}
+
+    body {
+    background-color: var(--primary-bg);
+    color: var(--primary-text);
+    align-items: center;
+
+    }
+
+    h1 {
+    color: var(--primary-text);
+    display: flex;
+    background-color: var(--header);
+    justify-content: center;
+    margin: 25px;
+    padding: 50px;
+    border-color:#000000;
+    border-radius: 30px;
+    border-width: 5px;
+    border-style: solid;
+    box-shadow: 5px 5px
+        }
+
+    #buttons {
+        display: flex;
+        justify-content: center;
+    }
+
+    input {
+        width: 500px;
+        height: 50px;
+        background-color: var(--buttons);
+        border-color:#000000;
+        border-radius: 30px;
+        border-width: 3px;
+        border-style: solid;
+    }
+
+    input[type="text"] {
+        padding-left: 15px;
+    }
+
+    button {
+        width: 75px;
+        height: 50px;
+        background-color: var(--buttons);
+         border-color:#000000;
+        border-radius: 30px;
+        border-width: 3px;
+        border-style: solid;
+    }
+
+    button:hover {
+        width: 75px;
+        height: 50px;
+        background-color: #f2efc7ff;
+         border-color:#000000;
+        border-radius: 30px;
+        border-width: 3px;
+        border-style: solid;
+        box-shadow: 5px 5px 0px black;
+    }
+
+/*
+Used AI to help refamiliarlize with grids, using the prompt:
+
+I want to use a grid in my CSS file so that the section class "achievement" shows the img icon as taking up 1/4 the line, and the rest of the text content taking up 3/4 of the line. Also, the h2 should be on top of the <p>, they should NOT be side by side.
+*/
+
+    .achievement {
+        background-color: var(--achievements-bg);
+        margin: 50px;
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        grid-template-areas:
+            "icon title"
+            "icon requirement";
+        border-color:#000000;
+        border-radius: 30px;
+        border-width: 3px;
+        border-style: solid;
+    }
+
+    .achievement img {
+        grid-area: icon;
+        width: 100%;
+    }
+
+    .achievement h2 {
+        grid-area: title;
+    }
+
+    .achievement p {
+        grid-area: requirement;
+    }
